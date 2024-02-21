@@ -21,6 +21,7 @@ const outputMessage = document.querySelector('#output-message');
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
   modalMessage.innerHTML = '';
+  message.focus();
 });
 
 /* function for show message inside of modal */
@@ -45,7 +46,7 @@ const resetOutputMessage = () => {
 const swapElementsObject = (obj) => Object.fromEntries(Object.entries(obj).map(([key, value]) => [value, key]));
 
 /* object with keys and values for encrypt messages */
-const codex = {
+const code = {
   'e': 'enter',
   'i': 'imes',
   'a': 'ai',
@@ -54,7 +55,7 @@ const codex = {
 };
 
 /* object with keys and values for desencrypt messages */
-const decodex = swapElementsObject(codex);
+const decode = swapElementsObject(code);
 
 /* set focus on textarea */
 message.focus();
@@ -94,7 +95,7 @@ const setOutputMessage = (msg) => {
   outputMessage.value = msg;
 }
 
-/* function logic to encrypt/desencryt message by codex/decodex */
+/* function logic to encrypt/desencryt message by code/decode */
 const logic = (obj) => {
   let msg = message.value;
   Object.keys(obj).forEach((element) => {
@@ -107,7 +108,7 @@ const logic = (obj) => {
 /* Click event: logic for encrypt message */
 btnEncrypt.addEventListener('click', () => {
   if (validate()) {
-    let msgEncrypt = logic(codex);
+    let msgEncrypt = logic(code);
     setOutputMessage(msgEncrypt);
   }
 });
@@ -115,7 +116,7 @@ btnEncrypt.addEventListener('click', () => {
 /* Click event: logic for desencrypt message */
 btnDesencrypt.addEventListener('click', () => {
   if (validate()) {
-    let msgDesencrypt = logic(decodex);
+    let msgDesencrypt = logic(decode);
     setOutputMessage(msgDesencrypt);
   }
 });

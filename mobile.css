@@ -1,0 +1,233 @@
+:root {
+  --footer-bgc-mobile: red;
+  --footer-bgc-tablet: yellow;
+  --footer-bgc-desktop: green;
+  --dark-blue-100: #609ED4;
+  --dark-blue-200: #356EA9;
+  --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
+  --dark-blue-500: #052051;
+  --light-blue-100: #F3F5FC;
+  --light-blue-200: #EFF1FA;
+  --light-blue-300: #E9ECF8;
+  --light-blue-400: #AAB2D5;
+  --light-blue-500: #757FB2;
+  --gray-100: #CED4DA;
+  --gray-200: #ADB5BD;
+  --gray-300: #868E96;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  background-color: var(--light-blue-100);
+  color: var(--dark-blue-500);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue-100);
+  color: var(--light-blue-100);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header picture {
+  margin: 0.5rem;
+  transition: 0.3s ease-out;
+}
+
+header picture:hover {
+  transform: rotate(15deg);
+}
+
+header p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+header ul.networks {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem;
+}
+
+header ul.networks>li {
+  transition: 0.3s ease-out;
+}
+
+header ul.networks>li:hover {
+  transform: scale(1.3) rotate(-5deg);
+}
+
+header ul.networks>li a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--light-blue-200);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background-color: var(--dark-blue-300);
+  color: var(--light-blue-100);
+  width: 100%;
+  height: 5rem;
+}
+
+footer p {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 2rem 2rem;
+  gap: 2rem;
+}
+
+section {
+  width: 100%;
+  height: 80%;
+}
+
+p.warning-msg {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: var(--dark-blue-200);
+}
+
+div.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn {
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1px solid var(--dark-blue-400);
+}
+
+.btn-primary {
+  background-color: var(--dark-blue-400);
+  color: var(--light-blue-100);
+}
+
+.btn-secondary {
+  background-color: var(--light-blue-100);
+}
+
+textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  resize: none;
+  color: var(--dark-blue-200);
+  font-size: 2rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  color: var(--dark-blue-400);
+  height: 10rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  font-size: 2rem;
+}
+
+blockquote picture {
+  display: none;
+}
+
+blockquote p {
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+blockquote small {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#output-message, #btn-copy {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 1.5rem;
+  width: 80dvw;
+  -webkit-animation-name: modal-up;
+  -webkit-animation-duration: 0.5s;
+  animation-name: modal-up;
+  animation-duration: 0.5s
+}
+
+.modal-content h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.close {
+  margin-top: 2rem;
+}
+
+@keyframes modal-up {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}

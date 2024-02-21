@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenges Encriptador de Texto</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" media="all" href="mobile.css">
+  <link rel="stylesheet" media="all and (min-width: 768px)" href="tablet.css">
+  <link rel="stylesheet" media="all and (min-width: 1024px)" href="desktop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2bb9f6e48b.js" crossorigin="anonymous"></script>
+</head>
+
+<body oncontextmenu="return false">
+  <header>
+    <picture>
+      <a href="https://www.aluracursos.com/" title="Alura curos"><img loading="lazy" class="logo" src="imagenes/logo.png" alt="Logo"></a>
+    </picture>
+    <p>Challenges Encriptador de Texto</p>
+    <ul class="networks">
+      <li><a href="https://www.linkedin.com/in/sgonzalez87/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/alucardsam" title="GitHub"><i class="fa-brands fa-square-github"></i></a></li>
+    </ul>
+  </header>
+  <main>
+    <section>
+      <textarea id="message" placeholder="Ingrese el texto aqui"></textarea>
+      <p class="warning-msg"><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+      <div class="buttons">
+        <button id="btn-encrypt" class="btn btn-primary" type="button"><i class="fa-solid fa-lock"></i> <data>Encriptar</data></button>
+        <button id="btn-desencrypt" class="btn btn-secondary" type="button"><i class="fa-solid fa-lock-open"></i> <data>Desencriptar</data></button>
+      </div>
+    </section>
+    <section>
+      <blockquote>
+        <picture>
+          <img loading="lazy" src="imagenes/dibujo.png" alt="dibujo">
+        </picture>
+        <p>Ningún mensaje fue encontrado</p>
+        <small>Ingresa el texto que deseas encriptar o desencriptar</small>
+        <textarea id="output-message" readonly></textarea>
+      </blockquote>
+      <div class="buttons">
+        <button id="btn-copy" class="btn btn-secondary" type="button"><i class="fa-regular fa-copy"></i> Copiar</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p><i class="fa-regular fa-copyright"></i> 2024 Ing. Samuel Adrián González González</p>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <h1 id="">Mensaje!</h1>
+        <p id="modal-message"></p>
+        <button class="btn btn-secondary close" type="button"><i class="fa-solid fa-xmark"></i> Cerrar</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

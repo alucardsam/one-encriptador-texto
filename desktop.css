@@ -1,0 +1,29 @@
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 5rem;
+  height: 80dvh;
+}
+
+div.buttons {
+  flex-direction: row;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+textarea, blockquote {
+  height: 100%;
+}
+
+blockquote picture {
+  display: inline;
+}
+
+.modal-content {
+  width: 40dvw;
+}

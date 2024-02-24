@@ -20,6 +20,14 @@ textarea, blockquote {
   height: 100%;
 }
 
+textarea#output-message {
+  padding: 1rem;
+}
+
+blockquote {
+  margin-bottom: 3.3rem;
+}
+
 blockquote picture {
   display: inline;
 }

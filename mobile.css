@@ -130,8 +130,17 @@ div.buttons {
   color: var(--light-blue-100);
 }
 
+.btn-primary:hover {
+  background-color: var(--dark-blue-500);
+  color: var(--light-blue-100);
+}
+
 .btn-secondary {
   background-color: var(--light-blue-100);
+}
+
+.btn-secondary:hover {
+  background-color: var(--light-blue-400);
 }
 
 textarea {
@@ -143,6 +152,12 @@ textarea {
   font-size: 2rem;
   height: 10rem;
   margin-bottom: 1rem;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea#message:focus, textarea#message:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 blockquote {
@@ -154,10 +169,10 @@ blockquote {
   border-radius: 1rem;
   color: var(--dark-blue-400);
   height: 10rem;
-  padding: 1rem;
   text-align: center;
   margin-bottom: 1.4rem;
   font-size: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 blockquote picture {

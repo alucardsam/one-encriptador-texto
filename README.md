@@ -1,4 +1,4 @@
-<p align="center"><a href="https://www.aluracursos.com/" target="_blank"><img src="https://www.aluracursos.com/assets/img/challenges/oracle-one/logo_oracleAlura-es.1686744883.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://www.aluracursos.com/" target="_blank"><img src="https://www.aluracursos.com/assets/img/challenges/oracle-one/logo_oracleAlura-es.1686744883.svg" width="400" alt="Logo"></a></p>
 
 # Challenge ONE Sprint 01: Construye un encriptador de texto con Javascript
 <p align="center"><img src="screenshot.png" width="800" alt="Laravel Logo"></p>
